@@ -55,7 +55,11 @@
             </feature>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/*">
+            <!-- Esker remove maxsdkversion 32 on android.permission.WRITE_EXTERNAL_STORAGE,
+            to don't have issue during merge of other plugin -->
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+            <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
         </config-file>
         <config-file target="AndroidManifest.xml" parent="application">
           <provider
